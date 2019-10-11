@@ -1,16 +1,24 @@
 
 
 .site {
-  max-width: 40em;
+  max-width: 50em;
   margin: 0 auto;
 }
 
 .site-branding {
+  font-size: 1.2em;
   display: inline-block;
-  border-bottom: 1px solid;
+  color: $color__text-light;
+  border-bottom: 1px solid $color__border;
+  margin-bottom: 0.7em;
+	padding-bottom: 0.25em;
   a {
     text-decoration: none;
   }
+}
+
+.site-description {
+  font-size: 0.7em;
 }
 
 

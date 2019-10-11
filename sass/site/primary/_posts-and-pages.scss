@@ -13,6 +13,10 @@
 
 .entry-meta {
   font-size: 0.65em;
+  color: $color__text-light;
+  a {
+    color: inherit;
+  }
 }
 
 .page-content,
@@ -24,4 +28,47 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+article {
+  border-bottom: 1px solid $color__border;
+  padding-bottom: 1em;
+}
+
+article p:first-child {
+  margin-top: 0;
+}
+
+@media ( min-width: 600px ) {
+  .blog {
+    .post-thumbnail img {
+      max-width: 200px;
+      float: left;
+      margin-right: 20px;
+    }
+  }
+}
+
+.entry-title {
+  margin-bottom: 0em;
+  color: $color__text-heading;
+  a {
+    text-decoration: none;
+  }
+}
+
+.entry-header {
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid $color__border;
+}
+
+.blog {
+  .entry-header {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+  .entry-content {
+    margin-top: 0.5em;
+  }
 }

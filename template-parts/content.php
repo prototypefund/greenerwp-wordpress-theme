@@ -18,7 +18,7 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) :
+		if ( is_singular() && 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
 				<?php
@@ -28,33 +28,33 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-  <hr>
-
 	<?php lowtechwp_post_thumbnail(); ?>
 
-	<div class="entry-content">
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'lowtechwp' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
+  <div class="entry-content">
+      <?php if ( is_singular() ): ?>
+      <?php
+      the_content( sprintf(
+        wp_kses(
+          /* translators: %s: Name of current post. Only visible to screen readers */
+          __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'lowtechwp' ),
+          array(
+            'span' => array(
+              'class' => array(),
+            ),
+          )
+        ),
+        get_the_title()
+      ) );
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lowtechwp' ),
-			'after'  => '</div>',
-		) );
-		?>
-	</div><!-- .entry-content -->
-
-  <hr>
+      wp_link_pages( array(
+        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lowtechwp' ),
+        'after'  => '</div>',
+      ) );
+      ?>
+      <?php else: ?>
+        <?php the_excerpt() ?>
+      <?php endif ?>
+  </div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php lowtechwp_entry_footer(); ?>

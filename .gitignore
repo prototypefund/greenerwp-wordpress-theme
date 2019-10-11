@@ -1,2 +1,4 @@
 /node_modules
 /.cache
+*.css.map
+/style.css
