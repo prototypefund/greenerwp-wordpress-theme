@@ -31,12 +31,18 @@
 }
 
 article {
-  border-bottom: 1px solid $color__border;
-  padding-bottom: 1em;
+  border-bottom: 2px solid $color__border;
+  padding-bottom: 2em;
 }
 
 article p:first-child {
   margin-top: 0;
+}
+
+.post-thumbnail {
+  img {
+    border-radius: 2px;
+  }
 }
 
 @media ( min-width: 600px ) {
@@ -60,7 +66,7 @@ article p:first-child {
 .entry-header {
   margin-bottom: 1em;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid $color__border;
+  border-bottom: 2px solid $color__border;
 }
 
 .blog {

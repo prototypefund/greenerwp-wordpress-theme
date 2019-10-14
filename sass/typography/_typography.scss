@@ -6,8 +6,12 @@ optgroup,
 textarea {
 	color: $color__text-main;
 	font-family: $font__main;
-	@include font-size(1);
 	line-height: $font__line-height-body;
+
+	@include font-size(1.00);
+	@media ( min-width: 520px ) {
+		@include font-size(1.25);
+	}
 }
 
 @import "headings";

@@ -10,7 +10,10 @@ html {
 
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
-  padding: 64px 51px;
+}
+
+h1 {
+  font-size: 1.5em;
 }
 
 @import "lists";
