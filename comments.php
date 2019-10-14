@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package LowTechWP
+ * @package LowTechWPZero
  */
 
 /*
@@ -28,8 +28,8 @@ if ( post_password_required() ) {
 		?>
 		<h2 class="comments-title">
 			<?php
-			$lowtechwp_comment_count = get_comments_number();
-			if ( '1' === $lowtechwp_comment_count ) {
+			$ltwp0_comment_count = get_comments_number();
+			if ( '1' === $ltwp0_comment_count ) {
 				printf(
 					/* translators: 1: title. */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'lowtechwp' ),
@@ -38,8 +38,8 @@ if ( post_password_required() ) {
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $lowtechwp_comment_count, 'comments title', 'lowtechwp' ) ),
-					number_format_i18n( $lowtechwp_comment_count ),
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $ltwp0_comment_count, 'comments title', 'lowtechwp' ) ),
+					number_format_i18n( $ltwp0_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			}

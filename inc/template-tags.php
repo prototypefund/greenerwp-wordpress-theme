@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package LowTechWP
+ * @package LowTechWPZero
  */
 
-if ( ! function_exists( 'lowtechwp_entry_meta' ) ) {
+if ( ! function_exists( 'ltwp0_entry_meta' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function lowtechwp_entry_meta() {
+	function ltwp0_entry_meta() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -60,22 +60,22 @@ if ( ! function_exists( 'lowtechwp_entry_meta' ) ) {
 }
 
 
-if ( ! function_exists( 'lowtechwp_entry_footer' ) ) :
+if ( ! function_exists( 'ltwp0_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the comments.
 	 */
-	function lowtechwp_entry_footer() {
+	function ltwp0_entry_footer() {
 	}
 endif;
 
-if ( ! function_exists( 'lowtechwp_post_thumbnail' ) ) :
+if ( ! function_exists( 'ltwp0_post_thumbnail' ) ) :
 	/**
 	 * Displays an optional post thumbnail.
 	 *
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function lowtechwp_post_thumbnail() {
+	function ltwp0_post_thumbnail() {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
@@ -84,7 +84,7 @@ if ( ! function_exists( 'lowtechwp_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail( 'ltwp0-full-width' ); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>

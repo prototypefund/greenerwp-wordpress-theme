@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package LowTechWP
+ * @package LowTechWPZero
  */
 
 ?>
@@ -14,7 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php lowtechwp_post_thumbnail(); ?>
+	<?php ltwp0_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

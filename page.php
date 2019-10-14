@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package LowTechWP
+ * @package LowTechWPZero
  */
 
 get_header();
