@@ -25,33 +25,35 @@
       <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lowtechwp' ); ?></a>
 
       <header id="masthead" class="site-header">
-        <p class="site-branding">
-          <?php
-          the_custom_logo();
-          if ( is_front_page() && is_home() ) :
-          ?>
-            <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-          <?php
-          else :
-          ?>
-            <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-          <?php
-          endif;
-          $lowtechwp_description = get_bloginfo( 'description', 'display' );
-          if ( $lowtechwp_description || is_customize_preview() ) :
-          ?>
-            / <span class="site-description"><?php echo $lowtechwp_description; /* WPCS: xss ok. */ ?></span>
-          <?php endif; ?>
-        </p><!-- .site-branding -->
+        <div class="site-header__inner">
+          <p class="site-branding">
+            <?php
+            the_custom_logo();
+            if ( is_front_page() && is_home() ) :
+            ?>
+              <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
+            <?php
+            else :
+            ?>
+              <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
+            <?php
+            endif;
+            $ltwp0_description = get_bloginfo( 'description', 'display' );
+            if ( $ltwp0_description || is_customize_preview() ) :
+            ?>
+              / <span class="site-description"><?php echo $ltwp0_description; /* WPCS: xss ok. */ ?></span>
+            <?php endif; ?>
+          </p><!-- .site-branding -->
 
-        <nav id="site-navigation" class="main-navigation">
-          <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lowtechwp' ); ?></button>
-          <?php
-          wp_nav_menu( array(
-            'theme_location' => 'primary-menu',
-          ) );
-			    ?>
-		    </nav><!-- #site-navigation -->
+          <nav id="site-navigation" class="main-navigation">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lowtechwp' ); ?></button>
+            <?php
+            wp_nav_menu( array(
+              'theme_location' => 'primary-menu',
+            ) );
+            ?>
+		      </nav><!-- #site-navigation -->
+        </div>
 	    </header><!-- #masthead -->
 
 	    <div id="content" class="site-content">
