@@ -50,6 +50,6 @@ function ltwp0_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function ltwp0_customize_preview_js() {
-	wp_enqueue_script( 'lowtechwp-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'lowtechwp-zero-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'ltwp0_customize_preview_js' );

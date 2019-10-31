@@ -4,6 +4,7 @@
 		"parcel_build_command": "build"
 	},
 	"scripts": {
+		"build:dist": "",
 		"build:css": "cross-var parcel $npm_package_config_parcel_build_command --public-url . -d . -o style.css sass/style.scss",
 		"watch:css": "npm run build:css --lowtechwp-wordpress-theme:parcel_build_command=watch",
 		"test": "jest"

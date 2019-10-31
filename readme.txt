@@ -1,19 +1,22 @@
-=== LowTechWP ===
+=== LowTechWP Zero ===
 
-Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Contributors: cneumann automattic
+Tags: one-column, custom-menu, featured-images, threaded-comments, translation-ready
 
 Requires at least: 4.5
-Tested up to: 4.8
-Stable tag: 1.0.0
+Tested up to: 5.2.4
+Stable tag: 0.0.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called LowTechWP.
+A starter theme called LowTechWP Zero.
 
 == Description ==
 
-Minimal WordPress theme with focus on sustainability
+Minimal WordPress theme with focus on sustainability. Part of the LowTechWP
+project: https://lowtechwp.org
+
+The theme is under development and will change rapidly.
 
 == Installation ==
 
@@ -29,7 +32,7 @@ LowTechWP includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 0.0.1 - Oct 31 2019 =
 * Initial release
 
 == Credits ==

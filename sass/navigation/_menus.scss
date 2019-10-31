@@ -36,6 +36,14 @@ nav {
 	.current-menu-ancestor > a {
 		color: inherit;
 	}
+
+	.children {
+		background: $color__background-body;
+		li {
+			&::before { display: none };
+			padding: 0.5em 0.6em;
+		}
+	}
 }
 
 .main-navigation {

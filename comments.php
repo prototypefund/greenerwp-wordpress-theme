@@ -32,13 +32,13 @@ if ( post_password_required() ) {
 			if ( '1' === $ltwp0_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'lowtechwp' ),
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'lowtechwp-zero' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $ltwp0_comment_count, 'comments title', 'lowtechwp' ) ),
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $ltwp0_comment_count, 'comments title', 'lowtechwp-zero' ) ),
 					number_format_i18n( $ltwp0_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -63,7 +63,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'lowtechwp' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'lowtechwp-zero' ); ?></p>
 			<?php
 		endif;
 

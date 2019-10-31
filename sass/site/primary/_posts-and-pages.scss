@@ -1,5 +1,9 @@
 .sticky {
-	display: block;
+	.entry-title::after {
+		content: "📌";
+		float: right;
+		filter: grayscale(1);
+	}
 }
 
 .post,

@@ -26,7 +26,7 @@ if ( ! function_exists( 'ltwp0_entry_meta' ) ) {
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'lowtechwp' ),
+			esc_html_x( 'Posted on %s', 'post date', 'lowtechwp-zero' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -34,7 +34,7 @@ if ( ! function_exists( 'ltwp0_entry_meta' ) ) {
 
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'lowtechwp' ),
+			esc_html_x( 'by %s', 'post author', 'lowtechwp-zero' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -43,17 +43,17 @@ if ( ! function_exists( 'ltwp0_entry_meta' ) ) {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'lowtechwp' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'lowtechwp-zero' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'in %1$s', 'lowtechwp' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html__( 'in %1$s', 'lowtechwp-zero' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'lowtechwp' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'lowtechwp-zero' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'lowtechwp' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'lowtechwp-zero' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 	}

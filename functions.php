@@ -22,7 +22,7 @@ if ( ! function_exists( 'ltwp0_setup' ) ) :
 		 * If you're building a theme based on LowTechWPZero, use a find and replace
 		 * to change 'lowtechwp' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'lowtechwp', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'lowtechwp-zero', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -44,11 +44,11 @@ if ( ! function_exists( 'ltwp0_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary-menu' => esc_html__( 'Primary', 'lowtechwp' ),
+			'primary-menu' => esc_html__( 'Primary', 'lowtechwp-zero' ),
 		) );
 
 		register_nav_menus( array(
-			'footer-menu' => esc_html__( 'Footer', 'lowtechwp' ),
+			'footer-menu' => esc_html__( 'Footer', 'lowtechwp-zero' ),
 		) );
 
 		/*
@@ -63,26 +63,8 @@ if ( ! function_exists( 'ltwp0_setup' ) ) :
 			'caption',
 		) );
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'ltwp0_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
-
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
-
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'ltwp0_setup' );
@@ -109,9 +91,9 @@ add_action( 'after_setup_theme', 'ltwp0_content_width', 0 );
  */
 function ltwp0_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'lowtechwp' ),
+		'name'          => esc_html__( 'Sidebar', 'lowtechwp-zero' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'lowtechwp' ),
+		'description'   => esc_html__( 'Add widgets here.', 'lowtechwp-zero' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -124,22 +106,17 @@ add_action( 'widgets_init', 'ltwp0_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ltwp0_scripts() {
-	wp_enqueue_style( 'lowtechwp-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'lowtechwp-zero-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'lowtechwp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'lowtechwp-zero-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'lowtechwp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'lowtechwp-zero-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ltwp0_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
