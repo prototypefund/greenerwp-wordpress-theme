@@ -4,7 +4,8 @@
 		"parcel_build_command": "build"
 	},
 	"scripts": {
-		"build:dist": "",
+		"build:zip": "cd dist && zip -r lowtechwp-zero.zip lowtechwp-zero",
+		"build:dist": "test -d dist && rm dist -R; mkdir -p dist/lowtechwp-zero; cp -R *.php inc js languages LICENSE readme.txt *.css *.png template-parts dist/lowtechwp-zero",
 		"build:css": "cross-var parcel $npm_package_config_parcel_build_command --public-url . -d . -o style.css sass/style.scss",
 		"watch:css": "npm run build:css --lowtechwp-wordpress-theme:parcel_build_command=watch",
 		"test": "jest"
