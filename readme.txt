@@ -5,7 +5,7 @@ Tags: one-column, custom-menu, featured-images, threaded-comments, translation-r
 
 Requires at least: 4.5
 Tested up to: 5.2.4
-Stable tag: 0.0.1
+Stable tag: 0.0.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
