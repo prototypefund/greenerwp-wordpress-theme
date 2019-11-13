@@ -5,7 +5,7 @@ Tags: one-column, custom-menu, featured-images, threaded-comments, translation-r
 
 Requires at least: 4.5
 Tested up to: 5.2.4
-Stable tag: 0.0.2
+Stable tag: 0.0.3
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -31,6 +31,9 @@ The theme is under development and will change rapidly.
 LowTechWP includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
+
+= 0.0.3 - Nov 13 2019 =
+* Includes non-minified style files
 
 = 0.0.1 - Oct 31 2019 =
 * Initial release
