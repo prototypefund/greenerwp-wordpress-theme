@@ -16,9 +16,10 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-
-    <?php wp_head(); ?>
-  </head>
+		<?php /*if ( ! ltwp0_is_waiter() ):*/ ?>
+			<?php wp_head(); ?>
+		<?php /*endif*/ ?>
+	</head>
 
   <body <?php body_class(); ?>>
     <div id="page" class="site">
@@ -45,15 +46,17 @@
             <?php endif; ?>
           </p><!-- .site-branding -->
 
-          <nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lowtechwp-zero' ); ?></button>
-            <?php
-            wp_nav_menu( array(
-              'theme_location' => 'primary-menu',
-            ) );
-            ?>
-		      </nav><!-- #site-navigation -->
-        </div>
-	    </header><!-- #masthead -->
+					<?php if ( ! ltwp0_is_waiter() ): ?>
+						<nav id="site-navigation" class="main-navigation">
+							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lowtechwp-zero' ); ?></button>
+							<?php
+							wp_nav_menu( array(
+								'theme_location' => 'primary-menu',
+							) );
+							?>
+						</nav><!-- #site-navigation -->
+					<?php endif ?>
+				</div>
+			</header><!-- #masthead -->
 
 	    <div id="content" class="site-content">

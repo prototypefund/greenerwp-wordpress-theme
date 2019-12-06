@@ -16,17 +16,21 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 		</div><!-- .site-info -->
-    <nav class="footer-navigation">
-      <?php
-      wp_nav_menu( array(
-        'theme_location' => 'footer-menu',
-      ) );
-			?>
-		</nav><!-- #site-navigation -->
+		<?php if ( ! ltwp0_is_waiter() ): ?>
+			<nav class="footer-navigation">
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'footer-menu',
+				) );
+				?>
+			</nav><!-- #site-navigation -->
+		<?php endif ?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php wp_footer(); ?>
+<?php /* if ( ! ltwp0_is_waiter() ): */ ?>
+	<?php wp_footer(); ?>
+<?php /* endif */ ?>
 
 </body>
 </html>

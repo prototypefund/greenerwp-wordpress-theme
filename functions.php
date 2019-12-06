@@ -85,6 +85,13 @@ function ltwp0_content_width() {
 add_action( 'after_setup_theme', 'ltwp0_content_width', 0 );
 
 /**
+ * Returns true if the waiter page template is active.
+ */
+function ltwp0_is_waiter() {
+	return is_page_template( 'page-templates/waiter.php' );
+}
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar

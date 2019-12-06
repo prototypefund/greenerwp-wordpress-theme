@@ -1,3 +1,20 @@
+%input {
+	background: rgba(white, 0.5);
+	max-width: 100%;
+	color: $color__text-input;
+	border: 1px solid $color__border-input;
+	padding: 0.5rem 0.7rem;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -14,15 +31,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	max-width: 100%;
-	color: $color__text-input;
-	border: 1px solid $color__border-input;
-	border-radius: 3px;
-	padding: 3px;
-
-	&:focus {
-		color: $color__text-input-focus;
-	}
+	@extend %input;
 }
 
 select {

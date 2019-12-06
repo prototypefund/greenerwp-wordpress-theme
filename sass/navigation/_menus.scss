@@ -10,14 +10,8 @@ nav {
 	li {
 		float: left;
 		position: relative;
-		margin-right: 1em;
+		margin-right: 1.5em;
 
-		&::before {
-			display: inline-block;
-			content: "»";
-			filter: grayscale(1) opacity(0.4);
-			margin-right: 0.2em;
-		}
 		&:hover > a,
 		&.focus > a {
 			color: $color__text-nav;
@@ -28,13 +22,17 @@ nav {
 		display: inline-block;
 		text-decoration: none;
 		color: inherit;
+		&:visited {
+			color: inherit;
+		}
+		font-size: 1.2em;
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		color: inherit;
+		color: $color__text-nav;
 	}
 
 	.children {
