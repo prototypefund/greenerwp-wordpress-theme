@@ -5,7 +5,7 @@ Tags: one-column, custom-menu, featured-images, threaded-comments, translation-r
 Requires at least: 4.5
 Requires PHP: 7.0
 Tested up to: 5.2.4
-Stable tag: 0.0.3
+Stable tag: 0.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,9 @@ The theme is under development and will change rapidly.
 LowTechWP includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
+
+= 0.0.4 - Jan 31 2020 =
+* Relayout and style mobile navigation.
 
 = 0.0.3 - Nov 13 2019 =
 * Includes non-minified style files
