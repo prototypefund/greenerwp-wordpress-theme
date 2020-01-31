@@ -44,8 +44,8 @@ get_header();
 
 					<?php
 					/* translators: %1$s: smiley */
-					$ltwp0_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'lowtechwp-zero' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$ltwp0_archive_content" );
+					$lowtechwp_zero_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'lowtechwp-zero' ), convert_smilies( ':)' ) ) . '</p>';
+					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$lowtechwp_zero_archive_content" );
 
 					the_widget( 'WP_Widget_Tag_Cloud' );
 					?>

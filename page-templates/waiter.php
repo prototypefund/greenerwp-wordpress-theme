@@ -29,7 +29,7 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<div class="ltwp-waiter"></div>
+	<div class="lowtechwp-zero-waiter"></div>
 <?php
 get_sidebar();
 get_footer();

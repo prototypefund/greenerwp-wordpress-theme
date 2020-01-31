@@ -7,7 +7,7 @@
  * @package LowTechWPZero
  */
 
-if ( ! function_exists( 'ltwp0_setup' ) ) :
+if ( ! function_exists( 'lowtechwp_zero_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,7 +15,7 @@ if ( ! function_exists( 'ltwp0_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function ltwp0_setup() {
+	function lowtechwp_zero_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -67,7 +67,7 @@ if ( ! function_exists( 'ltwp0_setup' ) ) :
 		add_theme_support( 'customize-selective-refresh-widgets' );
 	}
 endif;
-add_action( 'after_setup_theme', 'ltwp0_setup' );
+add_action( 'after_setup_theme', 'lowtechwp_zero_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -76,18 +76,18 @@ add_action( 'after_setup_theme', 'ltwp0_setup' );
  *
  * @global int $content_width
  */
-function ltwp0_content_width() {
+function lowtechwp_zero_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'ltwp0_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'lowtechwp_zero_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'ltwp0_content_width', 0 );
+add_action( 'after_setup_theme', 'lowtechwp_zero_content_width', 0 );
 
 /**
  * Returns true if the waiter page template is active.
  */
-function ltwp0_is_waiter() {
+function lowtechwp_zero_is_waiter() {
 	return is_page_template( 'page-templates/waiter.php' );
 }
 
@@ -96,7 +96,7 @@ function ltwp0_is_waiter() {
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function ltwp0_widgets_init() {
+function lowtechwp_zero_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'lowtechwp-zero' ),
 		'id'            => 'sidebar-1',
@@ -107,12 +107,12 @@ function ltwp0_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'ltwp0_widgets_init' );
+add_action( 'widgets_init', 'lowtechwp_zero_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function ltwp0_scripts() {
+function lowtechwp_zero_scripts() {
 	wp_enqueue_style( 'lowtechwp-zero-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'lowtechwp-zero-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -123,7 +123,7 @@ function ltwp0_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'ltwp0_scripts' );
+add_action( 'wp_enqueue_scripts', 'lowtechwp_zero_scripts' );
 
 /**
  * Custom template tags for this theme.

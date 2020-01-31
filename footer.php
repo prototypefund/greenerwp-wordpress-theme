@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 		</div><!-- .site-info -->
-		<?php if ( ! ltwp0_is_waiter() ): ?>
+		<?php if ( ! lowtechwp_zero_is_waiter() ): ?>
 			<nav class="footer-navigation">
 				<?php
 				wp_nav_menu( array(
@@ -28,7 +28,7 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php /* if ( ! ltwp0_is_waiter() ): */ ?>
+<?php /* if ( ! lowtechwp_zero_is_waiter() ): */ ?>
 	<?php wp_footer(); ?>
 <?php /* endif */ ?>
 

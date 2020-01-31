@@ -14,11 +14,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function ltwp0_jetpack_setup() {
+function lowtechwp_zero_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'ltwp0_infinite_scroll_render',
+		'render'    => 'lowtechwp_zero_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -42,12 +42,12 @@ function ltwp0_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'ltwp0_jetpack_setup' );
+add_action( 'after_setup_theme', 'lowtechwp_zero_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function ltwp0_infinite_scroll_render() {
+function lowtechwp_zero_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

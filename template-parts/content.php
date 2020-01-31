@@ -22,13 +22,13 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				ltwp0_entry_meta();
+				lowtechwp_zero_entry_meta();
         ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php ltwp0_post_thumbnail(); ?>
+	<?php lowtechwp_zero_post_thumbnail(); ?>
 
   <div class="entry-content">
       <?php if ( is_singular() ): ?>
@@ -57,6 +57,6 @@
   </div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php ltwp0_entry_footer(); ?>
+		<?php lowtechwp_zero_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

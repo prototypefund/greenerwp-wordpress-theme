@@ -16,7 +16,7 @@
 		</header><!-- .entry-header -->
 	<?php endif ?>
 
-	<?php ltwp0_post_thumbnail(); ?>
+	<?php lowtechwp_zero_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
