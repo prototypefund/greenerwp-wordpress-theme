@@ -1,20 +1,20 @@
 === LowTechWP Zero ===
 
-Contributors: cneumann automattic
+Contributors: cneumann
 Tags: one-column, custom-menu, featured-images, threaded-comments, translation-ready
-
 Requires at least: 4.5
+Requires PHP: 7.0
 Tested up to: 5.2.4
 Stable tag: 0.0.3
-License: GNU General Public License v2 or later
-License URI: LICENSE
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 A starter theme called LowTechWP Zero.
 
 == Description ==
 
-Minimal WordPress theme with focus on sustainability. Part of the LowTechWP
-project: https://lowtechwp.org
+Minimal WordPress theme with focus on sustainability. Part of the GreenerWP
+project: https://greenerwp.net
 
 The theme is under development and will change rapidly.
 

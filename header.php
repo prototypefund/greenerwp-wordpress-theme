@@ -42,7 +42,7 @@
             $ltwp0_description = get_bloginfo( 'description', 'display' );
             if ( $ltwp0_description || is_customize_preview() ) :
             ?>
-              / <span class="site-description"><?php echo $ltwp0_description; /* WPCS: xss ok. */ ?></span>
+              / <span class="site-description"><?php echo esc_html( $ltwp0_description ); ?></span>
             <?php endif; ?>
           </p><!-- .site-branding -->
 

@@ -30,7 +30,7 @@ if ( ! function_exists( 'ltwp0_entry_meta' ) ) {
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 		$byline = sprintf(
 			/* translators: %s: post author. */
@@ -38,7 +38,7 @@ if ( ! function_exists( 'ltwp0_entry_meta' ) ) {
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="byline"> ' . $byline . '</span> '; // WPCS: XSS OK.
+		echo '<span class="byline"> ' . $byline . '</span> '; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
@@ -46,14 +46,14 @@ if ( ! function_exists( 'ltwp0_entry_meta' ) ) {
 			$categories_list = get_the_category_list( esc_html__( ', ', 'lowtechwp-zero' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'in %1$s', 'lowtechwp-zero' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html__( 'in %1$s', 'lowtechwp-zero' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'lowtechwp-zero' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'lowtechwp-zero' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'lowtechwp-zero' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 	}
