@@ -48,12 +48,21 @@
 
 					<?php if ( ! ltwp0_is_waiter() ): ?>
 						<nav id="site-navigation" class="main-navigation">
-							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lowtechwp-zero' ); ?></button>
-							<?php
-							wp_nav_menu( array(
-								'theme_location' => 'primary-menu',
-							) );
-							?>
+							<div class="main-navigation__inner">
+								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+									<span class="menu-toggle__label">
+										<?php esc_html_e( 'Primary Menu', 'lowtechwp-zero' ); ?>
+									</span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</button>
+								<?php
+								wp_nav_menu( array(
+									'theme_location' => 'primary-menu',
+								) );
+								?>
+							</div>
 						</nav><!-- #site-navigation -->
 					<?php endif ?>
 				</div>

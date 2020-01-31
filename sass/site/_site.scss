@@ -1,11 +1,13 @@
 .site-header {
-  background: #002b36;
-  color: #eee8d5;
+  background: $color__background-header;
+  color: $color__text-header;
   margin-bottom: 2em;
-  padding: 3em 0 0.7em;
+  padding: 0 0 0.7em;
+	position: relative;
 }
 
-.site-content, .site-footer, .site-header__inner {
+.site-content, .site-footer, .site-header__inner,
+.main-navigation.toggled .main-navigation__inner  {
 	width: 92vw;
   max-width: $size__site-max-text-width;
 	margin: 0 auto;
@@ -25,6 +27,7 @@
   font-size: 1.2em;
   display: inline-block;
   border-bottom: 2px solid $color__border;
+	margin-top: 3em;
   margin-bottom: 0.7em;
 	padding-bottom: 0.25em;
   a {
@@ -36,6 +39,7 @@
 
 .site-description {
   font-size: 0.7em;
+	display: inline-block;
 }
 
 
